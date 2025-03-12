@@ -79,7 +79,7 @@ export function ContactSection() {
         </div>
         
         <div className="max-w-[800px] mx-auto">
-          <div className="backdrop-blur-md bg-background/60 border border-primary/10 rounded-xl p-6 shadow-md dark:bg-black/20">
+          <div className="glass-card p-6 shadow-lg dark:bg-black/40 dark:border-white/5">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
@@ -89,7 +89,7 @@ export function ContactSection() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="bg-background/40 backdrop-blur-sm border-primary/20"
+                    className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10"
                   />
                 </div>
                 <div>
@@ -100,7 +100,7 @@ export function ContactSection() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="bg-background/40 backdrop-blur-sm border-primary/20"
+                    className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10"
                   />
                 </div>
               </div>
@@ -110,7 +110,7 @@ export function ContactSection() {
                   placeholder="Subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="bg-background/40 backdrop-blur-sm border-primary/20"
+                  className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10"
                 />
               </div>
               <div>
@@ -121,18 +121,20 @@ export function ContactSection() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="bg-background/40 backdrop-blur-sm border-primary/20"
+                  className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10"
                 />
               </div>
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full sm:w-auto glass-btn"
-                disabled={isSubmitting}
-              >
-                <Mail className="mr-2 h-4 w-4" />
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </Button>
+              <div className="flex justify-center sm:justify-start">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="glass-btn dark:bg-primary/70 dark:hover:bg-primary/80"
+                  disabled={isSubmitting}
+                >
+                  <Mail className="mr-2 h-4 w-4" />
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </Button>
+              </div>
             </form>
           </div>
         </div>

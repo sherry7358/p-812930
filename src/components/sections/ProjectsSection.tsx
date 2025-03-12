@@ -52,7 +52,7 @@ export function ProjectsSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           {projects.map((project, index) => (
-            <Card key={project.title} className="overflow-hidden border-2 hover:border-primary transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 100}ms` }}>
+            <Card key={project.title} className="overflow-hidden border-2 hover:border-primary transition-all duration-300 animate-scale-in glass-card dark:bg-black/30 dark:border-white/5" style={{ animationDelay: `${index * 100}ms` }}>
               <div className="aspect-video overflow-hidden">
                 <img
                   src={project.image}
@@ -69,7 +69,7 @@ export function ProjectsSection() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 rounded-full text-xs bg-secondary/10 text-secondary-foreground"
+                      className="px-3 py-1 rounded-full text-xs bg-secondary/10 text-secondary-foreground dark:bg-secondary/20"
                     >
                       {tech}
                     </span>
@@ -77,12 +77,12 @@ export function ProjectsSection() {
                 </div>
               </CardContent>
               <CardFooter className="flex gap-4">
-                <Button variant="outline" size="sm" asChild>
+                <Button variant="outline" size="sm" asChild className="dark:border-white/10 dark:bg-black/20 dark:hover:bg-black/30">
                   <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4 mr-2" /> Live Demo
                   </a>
                 </Button>
-                <Button variant="outline" size="sm" asChild>
+                <Button variant="outline" size="sm" asChild className="dark:border-white/10 dark:bg-black/20 dark:hover:bg-black/30">
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4 mr-2" /> Code
                   </a>
