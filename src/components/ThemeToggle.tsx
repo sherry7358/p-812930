@@ -24,10 +24,10 @@ export function ThemeToggle() {
       aria-label="Toggle theme"
       className="rounded-full"
     >
-      {theme === "dark" ? (
-        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 transition-all" />
-      ) : (
+      {theme === "light" ? (
         <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 transition-all" />
+      ) : (
+        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 transition-all" />
       )}
     </Button>
   );

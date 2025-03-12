@@ -79,20 +79,20 @@ export function ContactSection() {
         </div>
         
         <div className="max-w-[800px] mx-auto">
-          <div className="glass-card p-6 shadow-lg dark:bg-black/40 dark:border-white/5">
+          <div className="glass-card p-6 sm:p-8 shadow-lg dark:bg-black/40 dark:border-white/5">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid gap-6 sm:grid-cols-2">
-                <div>
+                <div className="w-full">
                   <Input
                     name="name"
                     placeholder="Your Name"
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10"
+                    className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10 w-full"
                   />
                 </div>
-                <div>
+                <div className="w-full">
                   <Input
                     name="email"
                     type="email"
@@ -100,7 +100,7 @@ export function ContactSection() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10"
+                    className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10 w-full"
                   />
                 </div>
               </div>
@@ -110,7 +110,7 @@ export function ContactSection() {
                   placeholder="Subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10"
+                  className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10 w-full"
                 />
               </div>
               <div>
@@ -121,14 +121,14 @@ export function ContactSection() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10"
+                  className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10 w-full resize-none"
                 />
               </div>
               <div className="flex justify-center sm:justify-start">
                 <Button
                   type="submit"
                   size="lg"
-                  className="glass-btn dark:bg-primary/70 dark:hover:bg-primary/80"
+                  className="glass-btn dark:bg-primary/70 dark:hover:bg-primary/80 px-8 py-6 h-auto"
                   disabled={isSubmitting}
                 >
                   <Mail className="mr-2 h-4 w-4" />
