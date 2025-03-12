@@ -25,9 +25,9 @@ export function ThemeToggle() {
       className="rounded-full"
     >
       {theme === "light" ? (
-        <Moon className="h-[1.2rem] w-[1.2rem] rotate-90 transition-all dark:rotate-0" />
+        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 transition-all" />
       ) : (
-        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 transition-all dark:-rotate-90" />
+        <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 transition-all" />
       )}
     </Button>
   );

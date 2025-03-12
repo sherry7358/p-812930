@@ -10,13 +10,14 @@ const navItems = [
   { name: "Projects", href: "#projects" },
   { name: "Team", href: "#team" },
   { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/60 backdrop-blur supports-[backdrop-filter]:bg-background/40 glass">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <a href="#" className="text-xl font-bold text-gradient">Portfolio</a>
@@ -52,7 +53,7 @@ export function Header() {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto bg-background p-6 md:hidden animate-fade-in">
+        <div className="fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto bg-background/95 backdrop-blur-md p-6 md:hidden animate-fade-in glass">
           <nav className="flex flex-col gap-6 text-lg">
             {navItems.map((item) => (
               <a
