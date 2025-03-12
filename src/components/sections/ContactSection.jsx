@@ -83,7 +83,9 @@ export function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="w-full">
+                  <label htmlFor="name" className="sr-only">Name</label>
                   <Input
+                    id="name"
                     name="name"
                     placeholder="Your Name"
                     required
@@ -93,7 +95,9 @@ export function ContactSection() {
                   />
                 </div>
                 <div className="w-full">
+                  <label htmlFor="email" className="sr-only">Email</label>
                   <Input
+                    id="email"
                     name="email"
                     type="email"
                     placeholder="Your Email"
@@ -104,8 +108,10 @@ export function ContactSection() {
                   />
                 </div>
               </div>
-              <div>
+              <div className="w-full">
+                <label htmlFor="subject" className="sr-only">Subject</label>
                 <Input
+                  id="subject"
                   name="subject"
                   placeholder="Subject"
                   value={formData.subject}
@@ -113,8 +119,10 @@ export function ContactSection() {
                   className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10 w-full"
                 />
               </div>
-              <div>
+              <div className="w-full">
+                <label htmlFor="message" className="sr-only">Message</label>
                 <Textarea
+                  id="message"
                   name="message"
                   placeholder="Your Message"
                   rows={5}
