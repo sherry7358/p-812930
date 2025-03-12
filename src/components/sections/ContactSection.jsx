@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -82,7 +81,7 @@ export function ContactSection() {
           <div className="glass-card p-6 sm:p-8 shadow-lg dark:bg-black/40 dark:border-white/5">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid gap-6 sm:grid-cols-2">
-                <div className="w-full">
+                <div className="w-full mb-4">
                   <label htmlFor="name" className="sr-only">Name</label>
                   <Input
                     id="name"
@@ -94,7 +93,7 @@ export function ContactSection() {
                     className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10 w-full"
                   />
                 </div>
-                <div className="w-full">
+                <div className="w-full mb-4">
                   <label htmlFor="email" className="sr-only">Email</label>
                   <Input
                     id="email"
@@ -108,7 +107,7 @@ export function ContactSection() {
                   />
                 </div>
               </div>
-              <div className="w-full">
+              <div className="w-full mb-4">
                 <label htmlFor="subject" className="sr-only">Subject</label>
                 <Input
                   id="subject"
@@ -119,7 +118,7 @@ export function ContactSection() {
                   className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10 w-full"
                 />
               </div>
-              <div className="w-full">
+              <div className="w-full mb-4">
                 <label htmlFor="message" className="sr-only">Message</label>
                 <Textarea
                   id="message"
@@ -132,7 +131,7 @@ export function ContactSection() {
                   className="glass backdrop-blur-sm border-primary/20 dark:bg-black/30 dark:border-white/10 w-full resize-none"
                 />
               </div>
-              <div className="flex justify-center sm:justify-start">
+              <div className="flex justify-center sm:justify-start mt-6">
                 <Button
                   type="submit"
                   size="lg"
